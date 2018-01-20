@@ -10,12 +10,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
   var sumResult = a + b;
-  var result = [sumResult, "The sum of " + a + " and " + b + " is " + sumResult];
+  var result = [sumResult, "The sum of " + a + " and " + b + " is " + sumResult + "."];
   console.log(result);
   return result;
 }
 
 // Here is the test for sum(); uncomment it to run it
+testSum(4, 7);
 var result = sum(4, 7);
 //alert('The array sum returned is: ' + result);
 var element = document.getElementById('sum');
@@ -33,12 +34,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+  var multiplyResult = a * b;
+  var result = [multiplyResult, "The product of " + a + " and " + b + " is " + multiplyResult + "."];
+  console.log(result);
+  return result;
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
-
+testMultiply(5,9);
+result = multiply(5,9);
+element = document.getElementById('multiply');
+element.textContent = "Result array returned from multiply is: " + result;
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
