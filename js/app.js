@@ -16,6 +16,7 @@ function sum(a, b) { //eslint-disable-line
 }
 
 // Here is the test for sum(); uncomment it to run it
+testSum(4, 7);
 var result = sum(4, 7);
 //alert('The array sum returned is: ' + result);
 var element = document.getElementById('sum');
