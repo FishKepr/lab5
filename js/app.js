@@ -93,13 +93,22 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(testArray) { //eslint-disable-line
-
+  var int1 = testArray[0];
+  var int2 = testArray[1];
+  var int3 = testArray[2];
+  var result = sum(int1,int2);
+  var element1 = sum(result[0],int3);
+  console.log("sumArray element1: " + element1);
+  var element2 = int1 + "," + int2 + "," + int3 + " was passed in as an array of numbers, and " + element1[0] + " is their sum.";
+  return [element1[0],element2];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
-
+testSumArray(testArray);
+result = sumArray(testArray);
+element = document.getElementById('sumArray');
+element.textContent = "Result array returned from sumArray is: " + result;
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
