@@ -9,16 +9,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-  var sumResult = a + b
+  var sumResult = a + b;
   var result = [sumResult, "The sum of " + a + " and " + b + " is " + sumResult];
+  console.log(result);
   return result;
 }
 
 // Here is the test for sum(); uncomment it to run it
 var result = sum(4, 7);
-alert('The array returned is: ' + result);
+//alert('The array returned is: ' + result);
 var element = document.getElementById('sum');
-//inside function this is the second statement
 element.textContent = "Result array returned is: " + result;
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
