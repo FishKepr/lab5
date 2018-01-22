@@ -10,7 +10,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
   var sumResult = a + b;
-  var result = [sumResult, "The sum of " + a + " and " + b + " is " + sumResult];
+  var result = [sumResult, "The sum of " + a + " and " + b + " is " + sumResult + "."];
   console.log(result);
   return result;
 }
@@ -34,12 +34,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+  var multiplyResult = a * b;
+  var result = [multiplyResult, "The product of " + a + " and " + b + " is " + multiplyResult + "."];
+  console.log(result);
+  return result;
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
-
+testMultiply(5,9);
+result = multiply(5,9);
+element = document.getElementById('multiply');
+element.textContent = "Result array returned from multiply is: " + result;
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -55,12 +60,23 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  var result = sum(a,b);
+  var element1 = sum(result[0],c);
+  console.log("element1: " + element1);
+  result = multiply(a,b);
+  var element2 = multiply(result[0],c);
+  console.log("element2: " + element2);
+  var element3 = a + " and " + b + " and " + c + " sum to " + element1[0] + ".";
+  var element4 = "The product of " + a + " and " + b + " and " + c + " is " + element2[0] + ".";
+  return [element1[0], element2[0], element3, element4];
 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
-
+testSumAndMultiply(4,7,5);
+result = sumAndMultiply(4,7,5);
+element = document.getElementById('sumAndMultiply1');
+element.textContent = "Result array returned from sumAndMultiply is: " + result;
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -77,13 +93,22 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(testArray) { //eslint-disable-line
-
+  var int1 = testArray[0];
+  var int2 = testArray[1];
+  var int3 = testArray[2];
+  var result = sum(int1,int2);
+  var element1 = sum(result[0],int3);
+  console.log("sumArray element1: " + element1);
+  var element2 = int1 + "," + int2 + "," + int3 + " was passed in as an array of numbers, and " + element1[0] + " is their sum.";
+  return [element1[0],element2];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
-
+testSumArray(testArray);
+result = sumArray(testArray);
+element = document.getElementById('sumArray');
+element.textContent = "Result array returned from sumArray is: " + result;
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -98,10 +123,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray) { //eslint-disable-line
-
+  var int1 = testArray[0];
+  var int2 = testArray[1];
+  var int3 = testArray[2];
+  var result = multiply(int1,int2);
+  var element1 = multiply(result[0],int3);
+  console.log("multiplyArray element1: " + element1);
+  var element2 = "The numbers " + int1 + "," + int2 + "," + int3 + " have a product of " + element1[0] + ".";
+  return [element1[0],element2];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
 
+testMultiplyArray(testArray);
+result = multiplyArray(testArray);
+element = document.getElementById('multiplyArray');
+element.textContent = "Result array returned from multiplyArray is: " + result;
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
+======
