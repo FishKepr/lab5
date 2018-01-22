@@ -134,8 +134,10 @@ function multiplyArray(testArray) { //eslint-disable-line
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
+
 testMultiplyArray(testArray);
 result = multiplyArray(testArray);
 element = document.getElementById('multiplyArray');
 element.textContent = "Result array returned from multiplyArray is: " + result;
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
+======
